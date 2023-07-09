@@ -1,0 +1,103 @@
+$primary: #9A1B1A;
+
+html, body{
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.label-error {
+  color: #fa5959 !important;
+  text-align: left !important;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.content-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.topbar-icon > svg {
+  font-size: 50px !important;
+}
+
+.MuiInputBase-root {
+  background: #FFFFFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px !important;
+}
+
+.MuiButtonBase-root {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px !important;
+}
+
+.long-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.table-container {
+  width: 100%;
+}
+
+.MuiTablePagination-spacer {
+  display: none !important;
+}
+
+.MuiTablePagination-displayedRows {
+  margin-bottom: 0 !important;
+}
+
+.MuiTableCell-footer > .MuiToolbar-root {
+  padding-left: 0 !important;
+  justify-content: center;
+}
+
+.swal2-container, .MuiPopover-root {
+  z-index: 9999 !important;
+}
+
+.swal2-popup {
+  background: #5A5858 !important;
+  color: white !important;
+}
+
+.swal2-confirm, .swal2-deny, .swal2-cancel {
+  background-color: unset !important;
+  &:focus {
+    box-shadow: unset !important;
+  }
+}
+
+.app-logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.MuiTableCell-root > p {
+  font-size: 0.875rem;
+}
