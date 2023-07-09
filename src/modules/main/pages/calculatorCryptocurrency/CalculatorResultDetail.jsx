@@ -1,7 +1,8 @@
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { formatUsdValue } from '@/helpers/utilsHelper.js';
 
-export const CalculatorResultDetail = ({ resultDetail, assetSymbol }) => {
+export const CalculatorResultDetail = ({ resultDetail }) => {
   return (
     <Box
       sx={{
@@ -9,10 +10,16 @@ export const CalculatorResultDetail = ({ resultDetail, assetSymbol }) => {
       }}
     >
       <Typography>
-        Earning coin: {`${resultDetail.earningCoin.toFixed(2)} ${assetSymbol}`}
+        Initial coin price: {`${formatUsdValue(resultDetail.coinPriceUsd)}`}
+      </Typography>
+      <Typography sx={{marginBottom: '1rem'}}>
+        Monthly return percentage: { resultDetail.monthlyReturn * 100 }%
       </Typography>
       <Typography>
-        Earning balance: {`${formatUsdValue(resultDetail.earningBalance)}`}
+        Coin earn value: {`${formatUsdValue(resultDetail.earningCoin)}`}
+      </Typography>
+      <Typography>
+        Balance earn value: {`${formatUsdValue(resultDetail.earningBalance)}`}
       </Typography>
     </Box>
   )

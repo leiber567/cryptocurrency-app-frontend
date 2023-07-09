@@ -24,7 +24,7 @@ export const MetricsCryptocurrency = () => {
     cryptoMarketData,
     getCryptoMarketData,
     handleSocketMarketMessage,
-    clearCryptoMetrics
+    clearCryptoMetrics,
   } = useCryptoMetricsStore();
 
   const url = getEnvironment().messariWsUrl;
@@ -39,22 +39,22 @@ export const MetricsCryptocurrency = () => {
     exportToCsv(
       formatCsvCryptocurrencyMarketData(cryptoMarketData),
       CRYPTO_CURRENCY_HEADER_FILE,
-      'crypto_currency_metrics'
-    )
-  }
+      'crypto_currency_metrics',
+    );
+  };
   const startExportToJson = () => {
     exportToJson(
       formatJsonCryptoCurrencyMarketData(cryptoMarketData),
-      'crypto_currency_metrics'
-    )
-  }
+      'crypto_currency_metrics',
+    );
+  };
   const getRowValue = (row, key) => {
     return getRowUserValue(row, key);
   };
   useEffect(() => {
     initCryptoMarketData();
     return () => {
-      clearCryptoMetrics()
+      clearCryptoMetrics();
       socketClient.disconnect();
     };
   }, []);
@@ -66,7 +66,7 @@ export const MetricsCryptocurrency = () => {
           variant="h4"
           sx={{
             textAlign: 'center',
-            marginBottom: '1rem'
+            marginBottom: '1rem',
           }}
         >
           Cryptocurrency metrics
@@ -75,12 +75,12 @@ export const MetricsCryptocurrency = () => {
       <Box
         sx={{
           margin: '1rem 0',
-          display: 'flex'
+          display: 'flex',
         }}
       >
         <Button
           sx={{
-            margin: '0 5px'
+            margin: '0 5px',
           }}
           variant="contained"
           onClick={startExportToCsv}

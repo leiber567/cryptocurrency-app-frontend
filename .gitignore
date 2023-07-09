@@ -11,6 +11,8 @@ node_modules
 docs
 dist
 dist-ssr
+.nyc_output
+coverage
 *.local
 .env
 

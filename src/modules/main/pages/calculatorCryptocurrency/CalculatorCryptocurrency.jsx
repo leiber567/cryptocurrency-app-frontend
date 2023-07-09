@@ -142,7 +142,6 @@ export const CalculatorCryptocurrency = () => {
                     calculatorResult[currentCryptoAsset.symbol] && (
                       <CalculatorResultDetail
                         resultDetail={calculatorResult[currentCryptoAsset.symbol]}
-                        assetSymbol={currentCryptoAsset.symbol}
                       />
                     )
                   }
