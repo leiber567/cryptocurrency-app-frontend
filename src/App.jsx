@@ -6,10 +6,6 @@ import AppRouter from './router/AppRouter';
 import { store } from './store';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from '@/theme.js';
-import moment from 'moment-timezone';
-import 'moment/locale/es';
-
-moment.locale('es');
 
 const App = () => {
   return (

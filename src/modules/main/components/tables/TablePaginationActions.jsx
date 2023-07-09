@@ -17,7 +17,7 @@ export const TablePaginationActions = (props) => {
   };
 
   return (
-    <Box sx={{ flexShrink: 0, ml: 2.5 }} className='p-0'>
+    <Box sx={{ flexShrink: 0, ml: 2.5 }}>
       <IconButton
         onClick={handleBackButtonClick}
         disabled={page === 0}

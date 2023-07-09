@@ -10,7 +10,7 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  TableSortLabel
+  TableSortLabel, Typography,
 } from '@mui/material';
 import {
   TablePaginationActions,
@@ -145,6 +145,13 @@ export const CryptoMetricsTable = ({
           </TableBody>
           <TableFooter>
             <TableRow>
+              <TableCell
+                colSpan={2}
+              >
+                <Typography>
+                  { `Total: ${rows.length} assets` }
+                </Typography>
+              </TableCell>
               <TablePagination
                 sx={{
                   '& .MuiTablePagination-spacer': {
@@ -153,11 +160,11 @@ export const CryptoMetricsTable = ({
                   '& .MuiToolbar-root': {
                     display: 'flex',
                     alignContent: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'end'
                   }
                 }}
                 rowsPerPageOptions={[DEFAULT_PAGINATION]}
-                colSpan={columns.length}
+                colSpan={columns.length - 2}
                 count={rows.length}
                 rowsPerPage={rowsPerPage}
                 page={page}

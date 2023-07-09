@@ -1,7 +1,5 @@
 import moment from 'moment-timezone';
 
-export const DEBOUNCE_TIMEOUT = 200;
-
 export const DEFAULT_PAGINATION = 10;
 
 export const stableSort = (array, comparator) => {

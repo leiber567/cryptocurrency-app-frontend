@@ -1,4 +1,4 @@
-$primary: #9A1B1A;
+$primary: #005275;
 
 html, body{
   margin: 0;
@@ -9,13 +9,6 @@ html, body{
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-}
-
-.label-error {
-  color: #fa5959 !important;
-  text-align: left !important;
-  margin-top: 5px;
-  margin-bottom: 0;
 }
 
 .content-left {
@@ -33,10 +26,6 @@ html, body{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-}
-
-.topbar-icon > svg {
-  font-size: 50px !important;
 }
 
 .MuiInputBase-root {
@@ -82,7 +71,7 @@ html, body{
 }
 
 .swal2-popup {
-  background: #5A5858 !important;
+  background: $primary !important;
   color: white !important;
 }
 
